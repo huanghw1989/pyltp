@@ -22,4 +22,5 @@ FROM alpine
 RUN mkdir -p /fs
 COPY --from=build /fs/pyltp-*.whl /fs/
 
-RUN mv pyltp-*.whl pyltp-0.2.0-py3-none-any.whl
+RUN cd /fs/ && \
+    mv pyltp-*.whl pyltp-0.2.0-py3-none-any.whl
