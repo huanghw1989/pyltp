@@ -16,7 +16,7 @@ RUN mkdir -p /fs && \
     cd `python -c "import os,pip;dir=os.path.dirname;print(dir(dir(pip.__file__)))"` && \
     ls | egrep "pyltp-.*\.egg" | xargs -i wheel convert {} && \
     mv -f pyltp-*.whl /fs/ && \
-    cd /fs/ && mv pyltp-*.whl pyltp-0.2.0-py3-none-any.whl
+    cd /fs/ && mv pyltp-*.whl pyltp-0.2.0-py2-none-any.whl
 
 FROM alpine
 
