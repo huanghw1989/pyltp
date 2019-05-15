@@ -1,4 +1,4 @@
-FROM python:3-stretch as build
+FROM python:3.7-stretch as build
 
 # pyltp build-env
 RUN apt-get update && \

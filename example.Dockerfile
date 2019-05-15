@@ -1,6 +1,6 @@
-FROM huanghw/pyltp as ltp
+FROM huanghw/pyltp:py37 as ltp
 
-FROM python:3.6-stretch
+FROM python:3.7-stretch
 
 # pyltp
 RUN mkdir -p /opt/pyltp
