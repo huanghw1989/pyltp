@@ -8,7 +8,9 @@ RUN apt-get update && \
 # pyltp
 RUN mkdir /install && \
     git clone https://github.com/HIT-SCIR/pyltp.git && \
-    cd pyltp && git checkout tags/0.2.0 -b build && git submodule init && git submodule update && \
+    cd pyltp && \
+    # git checkout tags/0.2.0 -b build && \
+    git submodule init && git submodule update && \
     python setup.py install
 
 # pack
